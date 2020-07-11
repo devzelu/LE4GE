@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AssemblyName>le4ge</AssemblyName>
+    <RootNamespace>le4ge</RootNamespace>
+  </PropertyGroup>
+
+  <!--This copies the publish directory to the resource folder which is named "my-server"-->
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>C:\Users\ZELU\Desktop\altV server 2\resources\myresource\</OutputPath>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AltV.Net.Async" Version="1.31.1" />
+    <PackageReference Include="MySql.Data" Version="8.0.20" />
+  </ItemGroup>
+</Project>
