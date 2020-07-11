@@ -126,7 +126,7 @@ namespace le4ge
 
                 case "/test":
                     ChatHandler chat = new ChatHandler();
-                    //NEED TO FIX
+                    //NEED TO FIX sdaa
                     //chat.SendSuccessMessage(player, "test succes message");
                     // Alt.EmitAllClients("chatmessage", "test message");
                     break;
