@@ -1,4 +1,4 @@
-﻿using le4ge.Utilites.Custom;
+using le4ge.Utilites.Custom;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -9,6 +9,12 @@ namespace le4ge
 {
     public class DatabaseManager : IManager
     {
+        
+        var server = "";
+        var database = "";
+        var uid = "";
+        var password = "";
+
         //Setup connection string
         public void Initialize()
         {
@@ -16,11 +22,6 @@ namespace le4ge
 
         public void SavePosition(int characterID, string position)
         {
-            var server = "127.0.0.1";
-            var database = "le4ge";
-            var uid = "zeluadmincheat";
-            var password = "AKUMI037d4WmjGUV";
-
             try
             {
                 var sql = $"UPDATE characters SET last_position='{position}' WHERE characters.model_id='{characterID}'";
@@ -45,10 +46,7 @@ namespace le4ge
 
         public List<CustomCharacter> SelectInfo(ulong Sid)
         {
-            var server = "127.0.0.1";
-            var database = "le4ge";
-            var uid = "zeluadmincheat";
-            var password = "AKUMI037d4WmjGUV";
+
             List<CustomCharacter> playerInfo = new List<CustomCharacter>();
             try
             {
